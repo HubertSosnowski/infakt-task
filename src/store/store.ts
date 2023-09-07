@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import accountantsSlice from "./accountants/slice";
+import appSlice from "./app/slice";
 
 const reducers = {
+  app: appSlice.reducer,
   accountants: accountantsSlice.reducer,
 };
 

@@ -1,5 +1,9 @@
 import { styled } from "styled-components";
 
+interface RowValueProps {
+  readonly underline?: boolean
+}
+
 export const InnerCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -49,8 +53,19 @@ export const RowText = styled.p`
   font-weight: 400;
   line-height: 20px;
 `
-export const RotInfo = styled.p`
+export const RowValue = styled.p<RowValueProps>`
   color: rgba(0,0,0,1);
   font-size: 16px;
   line-height: 24px;
+  text-decoration: ${(props) => props.underline ? 'underline' : 'none'};
+
+  a {
+    all: unset;
+    cursor: pointer;
+  }
 `
+
+export const SmallValue = styled.span`
+  font-size: 12px;
+  line-height: 16px;
+`;

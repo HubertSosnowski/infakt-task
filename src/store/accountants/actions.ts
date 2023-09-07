@@ -1,7 +1,8 @@
 import { ThunkAction } from "redux-thunk";
 import { AnyAction } from "redux";
-import { RootState } from "../store";
 
+import { RootState } from "../store";
+import { appActions } from "../app/slice";
 import { accountantsActions } from "./slice";
 import {
   AccountantResponseType,
@@ -67,6 +68,7 @@ export const onLoadNewAccountants =
   async (dispatch, getState) => {
     const { accountants } = getState();
     const parameters = generateParameters(accountants.pagination);
+    dispatch(appActions.storeIsLoadingState(true));
     try {
       const responseFromApi = await fetchAccountants(parameters);
       const newAccountants = mapAccountants(responseFromApi.results);
@@ -79,5 +81,7 @@ export const onLoadNewAccountants =
       dispatch(accountantsActions.storeActualPage(newActualPage));
     } catch (err) {
       console.log(err);
+    } finally {
+      dispatch(appActions.storeIsLoadingState(false));
     }
   };

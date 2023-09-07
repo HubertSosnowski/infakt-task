@@ -1,6 +1,6 @@
 import { Card } from "../../../UI/Card"
 import { Button } from "../../../UI/Button";
-import { MainRow, ImageWrapper, Image, MainInfo, MainInfoText, MainInfoName, Row, RowText, RotInfo, InnerCard } from "./AccountantCard.styled";
+import { MainRow, ImageWrapper, Image, MainInfo, MainInfoText, MainInfoName, Row, RowText, RowValue, InnerCard, SmallValue } from "./AccountantCard.styled";
 import { AccountantType } from '../../../store/accountants/types'
 
 const AccountantCard = ({ accountant }: { accountant: AccountantType }) => {
@@ -18,15 +18,15 @@ const AccountantCard = ({ accountant }: { accountant: AccountantType }) => {
         </MainRow>
         <Row>
           <RowText>E-mail</RowText>
-          <RotInfo>{accountant.email}</RotInfo>
+          <RowValue underline><a href={`mailto:${accountant.email}`}>{accountant.email}</a></RowValue>
         </Row>
         <Row>
           <RowText>Telefon</RowText>
-          <RotInfo>{accountant.cell}</RotInfo>
+          <RowValue>{accountant.cell}</RowValue>
         </Row>
         <Row>
           <RowText>Średnia cena netto usługi / m-c</RowText>
-          <RotInfo>350,00 PLN</RotInfo>
+          <RowValue>350,00 <SmallValue>PLN</SmallValue></RowValue>
         </Row>
         <Row>
           <Button text="Dowiedz się więcej" />
@@ -36,4 +36,4 @@ const AccountantCard = ({ accountant }: { accountant: AccountantType }) => {
   )
 }
 
-export default AccountantCard;
+export default AccountantCard; 
