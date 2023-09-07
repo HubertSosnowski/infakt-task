@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/infakt-task/static/css/main.fc5190f0.css",
-    "main.js": "/infakt-task/static/js/main.3fb8185a.js",
+    "main.js": "/infakt-task/static/js/main.6dfb46b5.js",
     "static/media/mainLogo.png": "/infakt-task/static/media/mainLogo.5b38e733549fd0ef0852.png",
     "index.html": "/infakt-task/index.html",
     "main.fc5190f0.css.map": "/infakt-task/static/css/main.fc5190f0.css.map",
-    "main.3fb8185a.js.map": "/infakt-task/static/js/main.3fb8185a.js.map"
+    "main.6dfb46b5.js.map": "/infakt-task/static/js/main.6dfb46b5.js.map"
   },
   "entrypoints": [
     "static/css/main.fc5190f0.css",
-    "static/js/main.3fb8185a.js"
+    "static/js/main.6dfb46b5.js"
   ]
 }
