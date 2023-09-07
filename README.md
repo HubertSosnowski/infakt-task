@@ -1,3 +1,12 @@
+## Użyte dodatkowe biblioteki na potrzeby zbudowania projektu
+
+```
+react-redux
+@reduxjs/toolkit
+react-router-dom
+styled-component
+```
+
 ## Zadanie testowe na pozycję React Developer
 
 Cel: stworzenie widoku z kartami księgowych z możliwością doładowania kolejnych kart po wciśnięciu przycisku.
