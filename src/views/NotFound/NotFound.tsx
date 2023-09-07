@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 
+import { Button } from '../../UI/Button';
+
 const NotFound = () => (
   <div>
     <h1>Nie znaleziono strony</h1>
-    <Link to="/">Powrót na strone główną</Link>
+    <Link to="/"><Button text='Powrót na stornę główną' /></Link>
   </div>
 );
 

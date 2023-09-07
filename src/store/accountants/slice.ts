@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { AccountantType, PaginationType } from "./types";
 import { RootState } from "../store";
+
+import { AccountantType, PaginationType } from "./types";
 
 const initialState: {
   isInitialLoaded: boolean;
