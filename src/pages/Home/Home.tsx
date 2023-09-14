@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { Button } from "../../components/UI/Button";
+import { Button } from "components/UI/Button";
 
 const LinkStyled = styled(Link)`
   text-decoration: none;

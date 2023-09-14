@@ -1,7 +1,7 @@
-import { Card } from "../../../components/UI/Card"
-import { Button } from "../../../components/UI/Button";
+import { Card } from "components/UI/Card"
+import { Button } from "components/UI/Button";
 import { MainRow, ImageWrapper, Image, MainInfo, MainInfoText, MainInfoName, Row, RowText, RowValue, InnerCard, SmallValue } from "./AccountantCard.styled";
-import { AccountantType } from '../../../store/accountants/types'
+import { AccountantType } from 'store/accountants/types'
 
 const AccountantCard = ({ accountant }: { accountant: AccountantType }) => {
   return (

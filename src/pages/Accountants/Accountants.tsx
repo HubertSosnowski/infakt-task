@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from '../../hooks/useStore'
-import { onLoadNewAccountants, onEnterPage } from '../../store/accountants/actions'
-import { selectAccountantsList } from '../../store/accountants/slice';
+import { useAppDispatch, useAppSelector } from 'hooks/useStore'
+import { onLoadNewAccountants, onEnterPage } from 'store/accountants/actions'
+import { selectAccountantsList } from 'store/accountants/slice';
 import { AccountantsStyled, AccountantsWrapper, LoadMoreWrapper } from './Accountants.styled';
 import AccountantCard from './AccountantCard/AccountantCard'
-import { Button } from '../../components/UI/Button';
+import { Button } from 'components/UI/Button';
 
 const Accountants = () => {
   const dispatch = useAppDispatch();

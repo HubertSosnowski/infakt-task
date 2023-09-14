@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import { useAppSelector } from "../../hooks/useStore";
-import { selectAppStore } from "../../store/app/slice";
+import { useAppSelector } from "hooks/useStore";
+import { selectAppStore } from "store/app/slice";
 
 const LoadingWrapper = styled.div`
   position: fixed;
