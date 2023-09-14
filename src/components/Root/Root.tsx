@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
 import { RootStyled, MainLogo, MainLogoImage } from "./Root.styled";
-import mainLogo from "./mainLogo.png";
+import mainLogo from "../../assets/mainLogo.png";
 
 const Root: React.FC<PropsWithChildren> = ({ children }) => {
   return (

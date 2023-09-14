@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { Button } from "../../UI/Button";
+import { Button } from "../../components/UI/Button";
 
 const LinkStyled = styled(Link)`
   text-decoration: none;
@@ -10,7 +10,7 @@ const LinkStyled = styled(Link)`
 const Home = () => {
   return (
     <div>
-      <LinkStyled to="ksiegowi">
+      <LinkStyled to="/ksiegowi">
         <Button text="Księgowi" />
       </LinkStyled>
     </div>

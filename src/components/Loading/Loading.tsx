@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import { useAppSelector } from "../../../hooks/hooks";
-import { selectAppStore } from "../../../store/app/slice";
+import { useAppSelector } from "../../hooks/useStore";
+import { selectAppStore } from "../../store/app/slice";
 
 const LoadingWrapper = styled.div`
   position: fixed;
@@ -22,16 +22,14 @@ const LoadingInner = styled.div`
 const Loading = () => {
   const appStore = useAppSelector(selectAppStore);
 
-  const generateLoading = () => {
-    return <LoadingWrapper>
-      <LoadingInner>
-        Ładowanie....
-      </LoadingInner>
-    </LoadingWrapper>
-  }
-
   if (appStore.isLoading) {
-    return generateLoading()
+    return (
+      <LoadingWrapper>
+        <LoadingInner>
+          Ładowanie....
+        </LoadingInner>
+      </LoadingWrapper>
+    )
   }
 
   return <></>

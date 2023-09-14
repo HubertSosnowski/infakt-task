@@ -18,6 +18,12 @@ const ButtonStyled = styled.button`
   cursor: pointer;
 `;
 
+/**
+ * UI - Button Component.
+ * This component represents a clickable button element with specified text.
+ * @param {ButtonProps} props - Component props.
+ * @returns {JSX.Element} A button element with the provided text and click event handler.
+ */
 export const Button = ({ text, onButtonClick }: ButtonProps) => {
   return <ButtonStyled onClick={onButtonClick}>{text}</ButtonStyled>
 }

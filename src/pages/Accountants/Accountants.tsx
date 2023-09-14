@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
+import { useAppDispatch, useAppSelector } from '../../hooks/useStore'
 import { onLoadNewAccountants, onEnterPage } from '../../store/accountants/actions'
 import { selectAccountantsList } from '../../store/accountants/slice';
 import { AccountantsStyled, AccountantsWrapper, LoadMoreWrapper } from './Accountants.styled';
 import AccountantCard from './AccountantCard/AccountantCard'
-import { Button } from '../../UI/Button';
+import { Button } from '../../components/UI/Button';
 
 const Accountants = () => {
   const dispatch = useAppDispatch();
@@ -17,12 +17,11 @@ const Accountants = () => {
 
   useEffect(() => {
     dispatch(onEnterPage());
-  }, [])
+  }, [dispatch])
 
   const generateAccountantsCards = () => accountants.map(accountant => {
     return <AccountantCard accountant={accountant} key={accountant.login.uuid} />
   })
-
 
   return (
     <AccountantsStyled>
@@ -36,4 +35,4 @@ const Accountants = () => {
   )
 };
 
-export default Accountants;
+export default Accountants; 

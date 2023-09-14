@@ -14,18 +14,17 @@ import {
 
 const API_URL = "https://randomuser.me/api";
 
-const generateParameters = (paginationInfo: PaginationType): ParametersType => {
-  const params = {
-    page: String(paginationInfo.actualPage + 1),
-    results: String(paginationInfo.accountantsPerPage),
-    gender: "female",
-    seed: "abc",
-  };
-  return params;
-};
+const generateParameters = (
+  paginationInfo: PaginationType
+): ParametersType => ({
+  page: String(paginationInfo.actualPage + 1),
+  results: String(paginationInfo.accountantsPerPage),
+  gender: "female",
+  seed: "abc",
+});
 
-const mapAccountants = (rawAccountants: AccountantType[]) => {
-  const readyAccountants = rawAccountants.map((accountant) => ({
+const mapAccountants = (rawAccountants: AccountantType[]) =>
+  rawAccountants.map((accountant) => ({
     cell: accountant.cell,
     name: {
       first: accountant.name.first,
@@ -40,8 +39,6 @@ const mapAccountants = (rawAccountants: AccountantType[]) => {
       uuid: accountant.login.uuid,
     },
   }));
-  return readyAccountants;
-};
 
 const fetchAccountants = async (
   parameters: ParametersType
@@ -54,7 +51,7 @@ const fetchAccountants = async (
   return responseJson;
 };
 
-export const onEnterPage =
+const onEnterPage =
   (): ThunkAction<void, RootState, unknown, AnyAction> =>
   async (dispatch, getState) => {
     const { accountants } = getState();
@@ -64,7 +61,7 @@ export const onEnterPage =
     }
   };
 
-export const onLoadNewAccountants =
+const onLoadNewAccountants =
   (): ThunkAction<void, RootState, unknown, AnyAction> =>
   async (dispatch, getState) => {
     const { accountants } = getState();
@@ -86,3 +83,16 @@ export const onLoadNewAccountants =
       dispatch(appActions.storeIsLoadingState(false));
     }
   };
+
+export {
+  /**
+   * Function handles entering a page and checks if the initial data is loaded.
+   * @returns {ThunkAction<void, RootState, unknown, AnyAction>} Redux thunk function.
+   */
+  onEnterPage,
+  /**
+   * Function that handles loading new accountant data from the server.
+   * @returns {ThunkAction<void, RootState, unknown, AnyAction>} Redux thunk function.
+   */
+  onLoadNewAccountants,
+};

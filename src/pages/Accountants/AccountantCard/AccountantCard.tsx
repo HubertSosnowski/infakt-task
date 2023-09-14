@@ -1,5 +1,5 @@
-import { Card } from "../../../UI/Card"
-import { Button } from "../../../UI/Button";
+import { Card } from "../../../components/UI/Card"
+import { Button } from "../../../components/UI/Button";
 import { MainRow, ImageWrapper, Image, MainInfo, MainInfoText, MainInfoName, Row, RowText, RowValue, InnerCard, SmallValue } from "./AccountantCard.styled";
 import { AccountantType } from '../../../store/accountants/types'
 
@@ -18,7 +18,7 @@ const AccountantCard = ({ accountant }: { accountant: AccountantType }) => {
         </MainRow>
         <Row>
           <RowText>E-mail</RowText>
-          <RowValue underline><a href={`mailto:${accountant.email}`}>{accountant.email}</a></RowValue>
+          <RowValue $underline><a href={`mailto:${accountant.email}`}>{accountant.email}</a></RowValue>
         </Row>
         <Row>
           <RowText>Telefon</RowText>

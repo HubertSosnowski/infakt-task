@@ -1,15 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Root from "./views/components/Root/Root";
-import Home from './views/Home/Home';
-import Accountants from './views/Accountants/Accountants';
-import NotFound from './views/NotFound/NotFound';
+import Root from "./components/Root/Root";
+import Home from './pages/Home/Home';
+import Accountants from './pages/Accountants/Accountants';
+import NotFound from './pages/NotFound/NotFound';
 
 const App = () => (
   <Root>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="ksiegowi" element={<Accountants />} />
+      <Route path="/ksiegowi" element={<Accountants />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </Root>

@@ -10,6 +10,12 @@ const CardStyled = styled.div`
   min-height: 376px;
 `
 
+/**
+ * UI - Card Component.
+ * This component is used to create a card container with children in it.
+ * @param {PropsWithChildren} props - Component props.
+ * @returns {JSX.Element} A card element containing the specified children.
+ */
 export const Card: React.FC<PropsWithChildren> = ({ children }) => {
   return <CardStyled>{children}</CardStyled>
 }

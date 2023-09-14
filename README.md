@@ -1,4 +1,32 @@
-## Użyte dodatkowe biblioteki na potrzeby zbudowania projektu
+# [LiveDemo](https://hubertsosnowski.github.io/infakt-task/) - GHPages
+
+### Odpal lokalnie
+
+Sklonuj projekt
+
+```bash
+  git clone https://github.com/HubertSosnowski/infakt-task
+```
+
+Przejdź do folderu z projektem
+
+```bash
+  cd infakt-task
+```
+
+Zainstaluj zależności
+
+```bash
+  npm install
+```
+
+Wystartuj server
+
+```bash
+  npm run start
+```
+
+### Użyte dodatkowe biblioteki na potrzeby zbudowania aplikacji
 
 ```
 react-redux

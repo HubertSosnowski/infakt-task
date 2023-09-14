@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 interface RowValueProps {
-  readonly underline?: boolean
+  readonly $underline?: boolean
 }
 
 export const InnerCard = styled.div`
@@ -57,7 +57,7 @@ export const RowValue = styled.p<RowValueProps>`
   color: rgba(0,0,0,1);
   font-size: 16px;
   line-height: 24px;
-  text-decoration: ${(props) => props.underline ? 'underline' : 'none'};
+  text-decoration: ${(props) => props.$underline ? 'underline' : 'none'};
 
   a {
     all: unset;
